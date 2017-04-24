@@ -1,0 +1,144 @@
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body {
+  min-width: 1200px;
+}
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container-12 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 {display:inline;float: left;position: relative;margin-left: 15px;margin-right: 15px;}
+
+
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {margin-left: 0;}
+
+.omega {margin-right: 0;}
+
+/* Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+
+.container-12 .grid-1 {width:70px;}
+.container-12 .grid-2 {width:170px;}
+.container-12 .grid-3 {width:270px;}
+.container-12 .grid-4 {width:370px;}
+.container-12 .grid-5 {width:470px;}
+.container-12 .grid-6 {width:570px;}
+.container-12 .grid-7 {width:670px;}
+.container-12 .grid-8 {width:770px;}
+.container-12 .grid-9 {width:870px;}
+.container-12 .grid-10 {width:970px;}
+.container-12 .grid-11 {width:1070px;}
+.container-12 .grid-12 {width:1170px;}
+
+/* Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .prefix-1 {padding-left:100px;}
+.container-12 .prefix-2 {padding-left:200px;}
+.container-12 .prefix-3 {padding-left:300px;}
+.container-12 .prefix-4 {padding-left:400px;}
+.container-12 .prefix-5 {padding-left:500px;}
+.container-12 .prefix-6 {padding-left:600px;}
+.container-12 .prefix-7 {padding-left:700px;}
+.container-12 .prefix-8 {padding-left:800px;}
+.container-12 .prefix-9 {padding-left:900px;}
+.container-12 .prefix-10 {padding-left:1000px;}
+.container-12 .prefix-11 {padding-left:1100px;}
+
+/* Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container-12 .suffix-1 {padding-right:100px;}
+.container-12 .suffix-2 {padding-right:200px;}
+.container-12 .suffix-3 {padding-right:300px;}
+.container-12 .suffix-4 {padding-right:400px;}
+.container-12 .suffix-5 {padding-right:500px;}
+.container-12 .suffix-6 {padding-right:600px;}
+.container-12 .suffix-7 {padding-right:700px;}
+.container-12 .suffix-8 {padding-right:800px;}
+.container-12 .suffix-9 {padding-right:900px;}
+.container-12 .suffix-10 {padding-right:1000px;}
+.container-12 .suffix-11 {padding-right:1100px;}
+
+  .view-content:after {
+    content: '';
+    width: 100%;
+    clear: both;
+    display: block;
+  }
+
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container-12:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
