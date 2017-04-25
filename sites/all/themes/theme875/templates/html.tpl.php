@@ -41,7 +41,7 @@ print $doctype; ?>
 <head<?php print $rdf->profile; ?>>
 
 	<?php print $head; ?>
-	
+
 	<!--[if lte IE 7]>
 		<div style=' text-align:center; clear: both; padding:0 0 0 15px; position: relative;'>
 			<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -49,24 +49,24 @@ print $doctype; ?>
 			</a>
 		</div>
 	<![endif]-->
-	
+
 	<title><?php print $head_title; ?></title>
-	
+
 	<?php print $styles;
 	print $scripts; ?>
-	
+
 	<!--[if LT IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	
+
 	<script>
 		if(jQuery.cookie('the_cookie')!=0)
 			document.write('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">')
 		else
 			document.write('<meta name="viewport" content="width=device-width">')
 	</script>
-	
-	<link rel="stylesheet" href="<?php echo base_path().path_to_theme() ?>/css/style-mobile.css" media="screen" id="style-mobile">
+  <script src="https://use.fontawesome.com/41d8df4425.js"></script>
+  <link rel="stylesheet" href="<?php echo base_path().path_to_theme() ?>/css/style-mobile.css" media="screen" id="style-mobile">
 	<link rel="stylesheet" href="<?php echo base_path().path_to_theme() ?>/css/skeleton-mobile.css" media="screen" id="skeleton-mobile">
 </head>
 <body id="body" class="<?php print $classes; ?>" <?php print $attributes;?>>
