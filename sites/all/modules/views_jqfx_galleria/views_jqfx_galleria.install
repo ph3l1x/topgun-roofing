@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ *
+ */
+/**
+ * Implements hook_requirements().
+ */
+function views_jqfx_galleria_requirements($phase = 'install') {
+  $requirements = array();
+  if (!function_exists('libraries_get_path')) {
+    $requirements[] = array(
+      'title' => 'Require module <a href="http://drupal.org/project/libraries">libraries</a>',
+      'value' => time(),
+      'description' => 'You must install libraries module first.',
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+  if (!file_exists(libraries_get_path('galleria') . '/galleria.js')) {
+    $requirements[] = array(
+      'title' => "Require libraries <a href='http://galleria.aino.se/'>Galleria</a>",
+      'value' => time(),
+      'description' => "You need download and extract <a href='http://galleria.aino.se/'>Galleria</a> to your libraries directory (typically sites/all/libraries/).",
+      'severity' => REQUIREMENT_ERROR,
+    );
+  }
+  return $requirements;
+}
