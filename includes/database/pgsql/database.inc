@@ -146,7 +146,7 @@ class DatabaseConnection_pgsql extends DatabaseConnection {
 
   public function queryTemporary($query, array $args = array(), array $options = array()) {
     $tablename = $this->generateTemporaryTableName();
-    $this->query('CREATE TEMPORARY TABLE {' . $tablename . '} AS ' . $query, $args, $options);
+    $this->query(preg_replace('/^SELECT/i', 'CREATE TEMPORARY TABLE {' . $tablename . '} AS SELECT', $query), $args, $options);
     return $tablename;
   }
 
@@ -215,14 +215,6 @@ class DatabaseConnection_pgsql extends DatabaseConnection {
     $this->query("SELECT pg_advisory_unlock(" . POSTGRESQL_NEXTID_LOCK . ")");
 
     return $id;
-  }
-
-  public function utf8mb4IsActive() {
-    return TRUE;
-  }
-
-  public function utf8mb4IsSupported() {
-    return TRUE;
   }
 }
 
