@@ -74,7 +74,7 @@
     <div id="page">
 
         <header id="header" role="banner" class="clearfix">
-                
+
             <div class="container-12">
                 <div class="grid-12">
                     <div class="section-1 clearfix">
@@ -84,7 +84,7 @@
                                     <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
                                 </a>
                             <?php endif; ?>
-                        
+
                             <?php if ($site_name || $site_slogan): ?>
                                 <div id="name-and-slogan">
                                   <?php if ($site_name): ?>
@@ -98,21 +98,21 @@
                                       </h1>
                                     <?php endif; ?>
                                   <?php endif; ?>
-                                
+
                                   <?php if ($site_slogan): ?>
                                     <div id="site-slogan"><?php print $site_slogan; ?></div>
                                   <?php endif; ?>
                                 </div><!-- /#name-and-slogan -->
                             <?php endif; ?>
                         </div>
-                        
+
                         <?php if ($page['contact_info']): ?>
                             <div class="col2">
                                 <?php print render($page['contact_info']); ?>
                             </div>
                         <?php endif; ?>
                     </div>
-                        
+
                     <?php if ($page['menu']): ?>
                         <div class="section-3 clearfix">
                             <?php print render($page['menu']); ?>
@@ -124,7 +124,7 @@
                             <?php print render($page['header']); ?>
                         </div>
                     <?php endif; ?>
-                    
+
                     <?php if ($page['header_bottom']): ?>
                         <div class="section-4 clearfix">
                             <?php print render($page['header_bottom']); ?>
@@ -132,22 +132,22 @@
                     <?php endif; ?>
                 </div>
             </div>
-            
-                
+
+
         </header><!-- /#header -->
 
 
         <div id="main-wrapper">
-        
+
             <div class="container-12">
                 <div class="grid-12">
                     <?php if ($page['content_top']): ?>
                         <?php print render($page['content_top']); ?>
                     <?php endif; ?>
-                            
-                            
+
+
                     <div id="main" class="clearfix">
-                        
+
                         <?php if ($page['sidebar_first']): ?>
                             <aside id="sidebar-first" class="column grid-4 alpha" role="complementary">
                                 <div class="section">
@@ -159,41 +159,41 @@
 
                         <div id="content" class="column <?php if (($page['sidebar_first']) && ($page['sidebar_second'])): print 'grid-4 no-alpha-omega'; elseif (($page['sidebar_first']) || ($page['sidebar_second'])): print 'grid-8';  else: print 'grid-12 alpha omega'; endif; ?> <?php if ($page['sidebar_first']): print 'omega'; endif; ?> <?php if ($page['sidebar_second']): print 'alpha'; endif; ?>" role="main">
                             <div class="section">
-                            
+
                                 <?php if ($breadcrumb): ?>
                                     <div id="breadcrumb" class="clearfix"><?php print $breadcrumb; ?></div>
                                 <?php endif; ?>
-                                
+
                                 <?php if ($messages): ?>
                                     <div id="messages"><div class="section clearfix">
                                       <?php print $messages; ?>
                                     </div></div> <!-- /.section, /#messages -->
                                   <?php endif; ?>
-                                
+
                                 <?php print render($title_prefix); ?>
-                                
+
                                 <?php if ($title): ?>
                                   <h1 class="title" id="page-title"><?php print $title; ?></h1>
                                 <?php endif; ?>
-                                
+
                                 <?php print render($title_suffix); ?>
-                                
+
                                 <?php if ($tabs): ?>
                                   <div class="tabs"><?php print render($tabs); ?></div>
                                 <?php endif; ?>
-                                
+
                                 <?php print render($page['help']); ?>
-                                
+
                                 <?php if ($action_links): ?>
                                   <ul class="action-links"><?php print render($action_links); ?></ul>
                                 <?php endif; ?>
-                                
+
                                 <?php print render($page['content']); ?>
-                            
+
                             </div>
                         </div>
 
-                            
+
                         <?php if ($page['sidebar_second']): ?>
                             <aside id="sidebar-second" class="column grid-4 omega" role="complementary">
                                 <div class="section">
@@ -203,13 +203,13 @@
                         <?php endif; ?>
 
                     </div><!-- /#main -->
-                            
+
                     <?php if ($page['content_bottom']): ?>
                         <?php print render($page['content_bottom']); ?>
                     <?php endif; ?>
                 </div>
             </div>
-        
+
         </div>
         <?php if ($page['pre_footer']): ?>
             <div class="container-12">
@@ -225,7 +225,6 @@
                 <div class="grid-12">
                     <div class="footer-wrapper clearfix">
                         <?php print render($page['footer']); ?>
-                        <?php if ($is_front): ?>More Roofing Company Drupal Themes at <a rel="nofollow" href="http://www.templatemonster.com/category/roofing-company-drupal-themes/" target="_blank">TemplateMonster.com</a><?php endif; ?>
                     </div>
                 </div>
             </div>
